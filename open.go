@@ -62,11 +62,12 @@ const (
 // files which can be used by a table cache which is
 // only used by a single db.
 func TableCacheSize(maxOpenFiles int) int {
-	tableCacheSize := maxOpenFiles - numNonTableCacheFiles
-	if tableCacheSize < minTableCacheSize {
-		tableCacheSize = minTableCacheSize
-	}
-	return tableCacheSize
+  panic("foo")
+	//tableCacheSize := maxOpenFiles - numNonTableCacheFiles
+	//if tableCacheSize < minTableCacheSize {
+	//	tableCacheSize = minTableCacheSize
+	//}
+	//return tableCacheSize
 }
 
 // Open opens a DB whose files live in the given directory.
